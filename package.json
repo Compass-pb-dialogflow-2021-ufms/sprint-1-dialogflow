@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Compass-pb-dialogflow-2021-ufms/sprint-1-dialogflow#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }

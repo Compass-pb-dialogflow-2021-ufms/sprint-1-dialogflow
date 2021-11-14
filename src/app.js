@@ -4,8 +4,16 @@ const app = express()
 const router = express.Router()
 const path = require('path')
 
+app.set('views', path.join(__dirname, 'view'))
+app.set('view engine', 'ejs')
+app.engine('html', require('ejs').renderFile)
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/view/home.html'))
+    res.render('home.html', { resultado: '' })
+})
+
+app.get('/resultado', (req, res) => {
+    res.render('home.html', { resultado: req.query })
 })
 
 app.use('/', router)

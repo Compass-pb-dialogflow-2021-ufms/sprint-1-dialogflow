@@ -5,6 +5,59 @@
         <title>Sprint 1: Teste</title>
     </head>
     <body>
+        <form action="/resultado" method="get">
+            <label> Genero: </label>
+            <select name="genero">
+                <option value="Advice How-To and Miscellaneous"> Advice How-To and Miscellaneous</option>
+                <option value="Manga"> Manga</option>
+                <option value="Chapter Books"> Chapter Books</option>
+                <option value="Childrens Middle Grade"> Childrens Middle Grade</option>
+                <option value="Picture Books"> Picture Books</option>
+                <option value="Series Books"> Series Books</option>
+                <option value="Young Adult"> Young Adult</option>
+                <option value="Animals"> Animals</option>
+                <option value="Audio Fiction"> Audio Fiction</option>
+                <option value="Audio Nonfiction"> Audio Nonfiction</option>
+                <option value="Business Books"> Business Books</option>
+                <option value="Celebrities"> Celebrities</option>
+                <option value="Crime and Punishment"> Crime and Punishment</option>
+                <option value="Culture"> Culture</option>
+                <option value="Education"> Education</option>
+                <option value="Espionage"> Espionage</option>
+                <option value="Expeditions Disasters and Adventures"> Expeditions Disasters and Adventures</option>
+                <option value="Fashion Manners and Customs"> Fashion Manners and Customs</option>
+                <option value="Food and Fitness"> Food and Fitness</option>
+                <option value="Games and Activities"> Games and Activities</option>
+                <option value="Health"> Health</option>
+                <option value="Humor"> Humor</option>
+                <option value="Indigenous Americans"> Indigenous Americans</option>
+                <option value="Relationships"> Relationships</option>
+                <option value="Family"> Family</option>
+                <option value="Race and Civil Rights"> Race and Civil Rights</option>
+                <option value="Religion Spirituality and Faith"> Religion Spirituality and Faith</option>
+                <option value="Science"> Science</option>
+                <option value="Sports"> Sports</option>
+                <option value="Travel"> Travel</option>
+            </select>
+
+            <br><br>
+
+            <label> Titulo: </label>
+            <input type="text" name="titulo">
+
+            <br><br>
+
+            <label> Autor: </label>
+            <input type="text" name="autor">
+
+            <br><br>
+
+            <button type="submit"> Buscar </button>
+        </form>
+
+        <div>
+            <%= resultado %>
+        </div>
 
     </body>
 </html>
