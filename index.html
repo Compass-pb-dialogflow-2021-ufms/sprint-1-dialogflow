@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Express HTML</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<body>
+    <form action="#">
+        <input id="iptLocal" />
+        <button type="button" id="btnConsultar" onclick="obterClima()">
+            Consultar
+        </button>
+    </form>
+    <h1>A temperatura em <b id="local"></b> está <b id="temperatura"></b>º</h1>
+</body>
+<script type="text/javascript">
+    $("#iptLocal").keyup(event, function () {
+        $("#local").html(event.target.value);
+    });
+
+    function obterClima() {
+        const local = $("#iptLocal").val();
+
+        fetch(`http://localhost:3000/obterClima?local=${local}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                $("#temperatura").html(Math.ceil(data.current.temperature));
+            })
+            .catch((error) => console.error(error));
+    }
+</script>
+
+</html>
