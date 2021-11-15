@@ -5,7 +5,7 @@
         async function selectComp(){
             try {
                 let select = document.querySelector("[data-select]").value;
-                const response = await fetch(`http://192.168.0.113:3000/api/:${select}`);
+                const response = await fetch(`https://projeto-sprint-one.herokuapp.com/api/:${select}`);
                 const data = await response.json(); 
                 show(data);
             } catch (error) {
