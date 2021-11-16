@@ -72,6 +72,9 @@ app.post("/", function (req, res) {
   });
 });
 // Porta que o server será carregado e aviso para o terminal.
+
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 app.listen(3000, function () {
   console.log("Tempo Agora está funcionando na porta 3000!");
 });
