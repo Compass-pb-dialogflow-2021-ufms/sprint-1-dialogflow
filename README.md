@@ -1,17 +1,36 @@
-# Aplicação de consulta climática consumindo OpenWeather
+# Tempo Agora
 
-<h2>Razão da escolha da API e funcionalidades</h2>
+## Sobre a API e funcionalidades
+
+  Escolhi usar a api [OpenWeather](https://openweathermap.org/), pois já tinha vontade de trabalhar numa aplicação relacionada ao clima.
+  Tempo Agora exibe a temperatura em graus Celsius, condição das nuvens, cobertura de nuvem, visibilidade, umidade e pressão a partir do nome da cidade, do estado ou do país que o usuário inserir. 
+  O nome fornecido pelo usuário é inserido na URL de busca da API, que retorna as informações listadas acima e são renderizadas estaticamente no navedor. 
+  
+
+  Para a realização deste projeto utilizei as seguintes tecnologias: 
 <ul>
-  <li>Escolher uma API pública (https://any-api.com/, ou qualquer outra);</li>
-  <li>Consumir essa API através do nodejs;</li>
-  <li>Criar uma página html para fazer consultas pela API;</li>
-  <li>Subir como uma aplicação no Heroku (https://www.heroku.com/). Dica: https://elements.heroku.com/buttons/orangemug/heroku-docker-nodejs</li>
+  <li>Express - para criar o servidor e acessar a API.</li>
+  <li>dotenv - acessar chaves ocultas no arquivo .env</li>
+  <li>body-parser - realizar a análise do corpo das solicitações.</li>
+  <li>request - fazer as chamadas http.</li>
+  <li>EJS: Para converter o HTML e CSS para a página estática que é visualizada no navegador.</li>
 </ul>
 
-<h2>Entrega</h2>
-<ul>
-  <li>Aceitar o convite do repositório da sprint-1-pb-ufms;</li>
-  <li>Criar uma branch no repositório com o formato nome-sobrenome (Exemplo: daniel-muller);</li>
-  <li>Subir o trabalho na branch com um readme.md, documentando detalhes sobre como a avaliação foi desenvolvida e como utilizar o sistema.</li>
-</ul>
-<b>O prazo de entrega é até às 13h do dia 16/11 no repositório do github (https://github.com/Compass-pb-dialogflow-2021-ufms/sprint-1-dialogflow).</b>
+## Execução  
+
+    Primeiramente é necessário que o Node.JS esteja instalado na máquina. 
+    Clone este repositório e instale as depenêcias: 
+    ```node
+    npm i express dotenv body-parser request ejs
+    ```
+    Em seguida, abra o terminal na pasta em que o repositório foi copiado e digite: 
+    ```node
+    node server.js
+    ```
+    Deve aparacer uma mensagem informando que Tempo Agora está funcionando na porta 3000. Basta acessar pelo navegador: 
+    ```
+    localhost:3000
+    ```
+    A aplicação também pode ser acessada via Web, basta clicar [aqui](https://tempo-agora-2021.herokuapp.com/).
+    
+
