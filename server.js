@@ -15,6 +15,6 @@ router.get("/obterClima", async function (req, res) {
 });
 
 app.use("/", router);
-app.listen(process.env.port || 3000);
+app.listen(process.env.PORT || 3000);
 
-console.log("Running at Port 3000");
+console.log(`Running at Port ${process.env.PORT || 3000}`);

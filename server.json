@@ -1,0 +1,6 @@
+{
+    "name": "weatherForecast",
+    "description": "Api para consulta do clima  de uma determinada cidade",
+    "image": "heroku/nodejs",
+    "addons": []
+  }
