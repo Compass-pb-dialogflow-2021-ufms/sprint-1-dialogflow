@@ -27,7 +27,11 @@
   ```node
   npm i express dotenv body-parser request ejs
   ```
+  Em seguida, crie um arquivo .env na pasta raiz do repositório para inserir sua chave da API (pode ser obtida se cadastrando no site [OpenWeather](https://openweathermap.org/)). 
 
+  ```
+  API_KEY= (insira sua chave API)
+  ```
    Deve aparacer uma mensagem informando que Tempo Agora está funcionando na porta 3000. Acesse a porta pelo navegador:
 
   ```
