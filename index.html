@@ -23,7 +23,7 @@
     function obterClima() {
         const local = $("#iptLocal").val();
 
-        fetch(`http://localhost:3000/obterClima?local=${local}`, {
+        fetch(`https://nodejs-weatherforecast.herokuapp.com/obterClima?local=${local}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
