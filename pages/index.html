@@ -8,14 +8,13 @@
 </head>
 <body>
     <h1>Bem vindo ao Achar Meu CEP</h1>
-    <form action="">
+    <form method="post" action="/meuCEP">
         <div>
-            <label for="CEP">Insira seu CEP</label>
-            <input name="CEP" id="CEP" type="text" placeholder="ex: 00000000">
+            <label for="CEP">Insira seu CEP:</label>
+            <input name="CEP" id="CEP" type="text" placeholder="ex: 00000000" required minlength="8" maxlength="8">
         </div>
         <button>enviar</button>
     </form>
-    <p id="resultado"></p>
-    <script src="./index.js"></script>
+    <script src="/index.js"></script>
 </body>
 </html>
