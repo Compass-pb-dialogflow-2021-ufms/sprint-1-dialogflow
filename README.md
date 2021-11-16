@@ -1,6 +1,6 @@
-# Avaliação Sprint 1
+# Aplicação de consulta climática consumindo OpenWeather
 
-<h2>Execução</h2>
+<h2>Razão da escolha da API e funcionalidades</h2>
 <ul>
   <li>Escolher uma API pública (https://any-api.com/, ou qualquer outra);</li>
   <li>Consumir essa API através do nodejs;</li>

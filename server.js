@@ -52,8 +52,7 @@ app.post("/", function (req, res) {
           weatherDescription = `${weather.weather[0].description}`,
           humidity = `${weather.main.humidity}`,
           clouds = `${weather.clouds.all}`,
-          visibility = `${weather.visibility}`,
-          main = `${weather.weather[0].main}`;
+          visibility = `${weather.visibility}`;
 
         // renderização dos dados na index.ejs
         res.render("index", {
@@ -66,7 +65,6 @@ app.post("/", function (req, res) {
           humidity: humidity,
           clouds: clouds,
           visibility: visibility,
-          main: main,
           error: null,
         });
       }
@@ -74,6 +72,6 @@ app.post("/", function (req, res) {
   });
 });
 // Porta que o server será carregado e aviso para o terminal.
-app.listen(5000, function () {
-  console.log("Weather app listening on port 5000!");
+app.listen(3000, function () {
+  console.log("Tempo Agora está funcionando na porta 3000!");
 });

@@ -3,10 +3,9 @@
 
 <head>
   <title>Tempo Agora</title>
-  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+  
   <link rel="shortcut icon" href="https://img.icons8.com/office/16/000000/sunset--v2.png" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css" />
@@ -17,8 +16,8 @@
 <body>
   <div class="card">
     <!-- Este formulário busca o nome da sua cidade -->
-    <form action="/" method="post">
-      <input name="city" type="text" class="ghost-input" placeholder="Insira uma cidade" required>
+    <form class="search" action="/" method="post">
+      <input name="city" type="text" class="search-bar" placeholder="Insira uma cidade" required>
       <button>
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
           width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -28,53 +27,30 @@
         </svg>
       </button>
     </form>
-  </div>
+  
 
     <div class="weather">
       <!-- Exibe os dados obtidos -->
       <%if( weather !==null){ %>
-      <h5 class="city">Tempo em <%= place %>, <%= weather.sys.country %></h5>
-      <p class="temp"> <%= temp %>°C</p>
+      <h2 class="city"><%= place %></h2>
+      <h1 class="temp"> <%= temp %>°C</h1>
       <div class="flex">
-        <img src="<%= icon %>" alt="Weather-Icon">
-        <div class="description-text"><p><%= description %></p></div>
+        <img src="<%= icon %>" alt="Weather-Icon" class="icon">
+        <div class="description"><p><%= description %></p></div>
       </div>
-      
-      <!-- <p class="main-condition">
-        <%= main %>
-      </p>
-      <div class="description-header">Descrição</div> -->
-      
-      <h5 class="card-title">Cobertura de nuvem: </h5>
-      <p class="card-text">
-        <%= clouds %>%
-      </p>
-      <h5 class="card-title">Visibildiade: </h5>
-      <p class="card-text">
-        <%= visibility %> meters
-      </p>
+      <div class="clouds">Cobertura de nuvem: <%= clouds %>%</div>
+      <div class="visibility">Visibildiade: <%= visibility %> metros</div>
+      <div class="humidity">Humidade: <%= humidity %> g.m-3</div>
+      <div class="pressure">Pressão: <%= pressure %> N·m−2</div>
     
-      <div class="humidity">
-        <h5 class="humidity-title">Humidade: </h5>
-        <p class="humidity-text">
-          <%= humidity %> g.m-3
-        </p>
-      </div>
-      <div class="pressure">
-        <h5 class="pressure-tittle">Pressão: </h5>
-        <p class="pressure-text">
-          <%= pressure %> N·m−2
-        </p>
-      </div>
-    </div>
-
-  <% } %>
-    <% if(error !==null){ %>
-      <p>
-        <%= error %>
-      </p>
       <% } %>
-        </div>
+        <% if(error !==null){ %>
+        <p>
+        <%= error %>
+        </p>
+      <% } %>
+    </div>
+  </div>
 </body>
 
 </html>
