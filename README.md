@@ -2,7 +2,9 @@
 
 # Sobre a API
 
-​	A API escolhida é a TVMAZE disponibilizada neste seguinte endereço: 'https://www.tvmaze.com/api'
+​	  A API escolhida é a TVMAZE disponibilizada neste seguinte endereço: 'https://www.tvmaze.com/api', consiste em uma API onde
+você pode pesquisar por filmes e séries, mas a pesquisa só são válidas na linguagem em inglês. 
+
 
 # Como Utilizar
 
@@ -14,9 +16,11 @@
 
 * 4 - abra o navegador e digite 'http://localhost:5000' para iniciar a aplicação
 
-* 5 - só são válidos pesquisas por programas ou filmes em inglês como : supermam, spidermam, pokemon, dragon ball etc...
+* 5 - só são válidos pesquisas por programas, séries ou filmes em inglês como : supermam, spidermam, pokemon, dragon ball etc...
 
-  ​    
+# Link do projeto integrado no Heroku
+
+* https://api-tvmaze-2785.herokuapp.com/
 
     
 
