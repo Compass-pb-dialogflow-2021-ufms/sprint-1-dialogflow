@@ -58,4 +58,4 @@ app.post("/meuCEP", (request, response) =>
 })
 
 
-app.listen(4000, () => console.log("Servidor rodando!"))
+app.listen(process.env.PORT, () => console.log("Servidor rodando!"))
