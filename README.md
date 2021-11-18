@@ -15,3 +15,13 @@
   <li>Subir o trabalho na branch com um readme.md, documentando detalhes sobre como a avaliação foi desenvolvida e como utilizar o sistema.</li>
 </ul>
 <b>O prazo de entrega é até às 13h do dia 16/11 no repositório do github (https://github.com/Compass-pb-dialogflow-2021-ufms/sprint-1-dialogflow).</b>
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Eu escolhi a API viacep que recebe um CEP e retorna o endereço correspondente, utilizei a API para preencher um formulário dinamicamente.
+Para realizar o trabalho utilizei Fetch API para consumir API através das promises.
+
+Como utilizar:
+Basta escrever o CEP, somente os números, ou se preferir pode colocar o hífen " - ".
+Exemplos: 79060010 ou 79060-010.
+Após digitar o Cep, aperte a tecla TAB e o formulário será preenchido com o restante do endereço correspondente.
+ 
